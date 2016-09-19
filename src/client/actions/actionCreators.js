@@ -1,5 +1,8 @@
-export const GET_REMOTE_MOVIES = 'GET_REMOTE_MOVIES'
-export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
+import * from './actionTypes';
+
+export function addMovie(movie){
+  return { type: ADD_MOVIE, movie}
+}
 
 export function getRemoteMovies(text){
   return { type: GET_REMOTE_MOVIES, text }
