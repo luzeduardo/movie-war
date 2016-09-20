@@ -5,7 +5,7 @@ import MovieSearch from './MovieSearch'
 class Main extends React.Component {
   render(){
     return (
-      <div className="columns is-mobile">
+      <div className="columns">
         <div className="column">
 
           <MovieSearch />
