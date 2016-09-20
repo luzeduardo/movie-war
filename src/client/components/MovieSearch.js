@@ -4,12 +4,10 @@ class MovieSearch extends React.Component {
   render() {
     return (
       <div>
-        <div className="btn-group">
-          <button type="button" className="button is-primary">
-            Search
-            <span className="glyphicon glyphicon-search" aria-hidden="true"></span>
-          </button>
-        </div>
+        <p className="control has-addons">
+          <input className="input" type="text" placeholder="Find a movie" />
+          <a className="button is-info">Search</a>
+        </p>
       </div>
     )
   }
