@@ -1,5 +1,5 @@
-function movieAdd(state = [], type){
+function movieAdd(state = [], action){
   console.log(state);
-  console.log(type);
+  console.log(action);
   return state;
 }

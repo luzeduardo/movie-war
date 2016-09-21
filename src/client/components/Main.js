@@ -5,13 +5,9 @@ import MovieSearch from './MovieSearch'
 class Main extends React.Component {
   render(){
     return (
-      <div className="columns">
-        <div className="column">
-
+      <div className="container is-fluid">
           <MovieSearch />
           <MovieList />
-
-        </div>
       </div>
   )
   }
