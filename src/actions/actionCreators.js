@@ -1,4 +1,7 @@
-import * from './actionTypes';
+export const ADD_MOVIE = 'ADD_MOVIE'
+export const GET_REMOTE_MOVIES = 'GET_REMOTE_MOVIES'
+export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
+export const SHOW_ALL = 'SHOW_ALL'
 
 export function addMovie(movie){
   return { type: ADD_MOVIE, movie}
@@ -14,6 +17,6 @@ export const VisibilityFilters = {
   SHOW_ACTIVE: 'SHOW_ACTIVE'
 }
 
-export setVisibilityFilter(filter){
+export function setVisibilityFilter(filter){
   return {type: SET_VISIBILITY_FILTER, filter }
 }
