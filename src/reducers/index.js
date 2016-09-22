@@ -1,20 +1,19 @@
-import VisibilityFilters from './actions'
-// import VisibilityFilters from 'action'
+import * as ac from '../actions/actionCreators'
 
 const initialState = {
-  visibilityFilter: VisibilityFilters.SHOW_ALL,
+  visibilityFilter: ac.SHOW_ALL,
   movies: []
 }
 
 function movies(state = initialState, action) {
   switch (action.type) {
-    case SET_VISIBILITY_FILTER:
+    case ac.SET_VISIBILITY_FILTER:
       return Object.assign({}, state, {
         visibilityFilter: action.filter
       })
       break;
 
-    case ADD_MOVIE:
+    case ac.ADD_MOVIE:
       return Object.assign({}, state, {
         movies: [
           ...state.movies,
@@ -23,16 +22,15 @@ function movies(state = initialState, action) {
             completed: false
           }
         ]
-
       })
     default:
       return state
   }
 }
 
-function visibilityFilter(state = SHOW_ALL, action){
+function visibilityFilter(state = ac.SHOW_ALL, action){
   switch (action.type) {
-    case SET_VISIBILITY_FILTER:
+    case ac.SET_VISIBILITY_FILTER:
       return action.filter
       break;
     default:
