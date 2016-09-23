@@ -3,11 +3,11 @@ export const GET_REMOTE_MOVIES = 'GET_REMOTE_MOVIES'
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 export const SHOW_ALL = 'SHOW_ALL'
 
-export function addMovie(movie){
+export const addMovie = (movie) => {
   return { type: ADD_MOVIE, movie}
 }
 
-export function getRemoteMovies(text){
+export const getRemoteMovies = (text) => {
   return { type: GET_REMOTE_MOVIES, text }
 }
 
@@ -17,6 +17,6 @@ export const VisibilityFilters = {
   SHOW_ACTIVE: 'SHOW_ACTIVE'
 }
 
-export function setVisibilityFilter(filter){
+export const setVisibilityFilter = (filter) => {
   return {type: SET_VISIBILITY_FILTER, filter }
 }

@@ -5,7 +5,7 @@ const initialState = {
   movies: []
 }
 
-function movies(state = initialState, action) {
+const movies = (state = initialState, action) => {
   switch (action.type) {
     case ac.SET_VISIBILITY_FILTER:
       return Object.assign({}, state, {
@@ -28,7 +28,7 @@ function movies(state = initialState, action) {
   }
 }
 
-function visibilityFilter(state = ac.SHOW_ALL, action){
+const visibilityFilter = (state = ac.SHOW_ALL, action) => {
   switch (action.type) {
     case ac.SET_VISIBILITY_FILTER:
       return action.filter
@@ -38,7 +38,7 @@ function visibilityFilter(state = ac.SHOW_ALL, action){
   }
 }
 
-function movieApp(state = {}, action){
+const movieApp = (state = {}, action) => {
   return {
     visibilityFilter: visibilityFilter(state.visibilityFilter, action),
     movies: movies(state.movies, action)
