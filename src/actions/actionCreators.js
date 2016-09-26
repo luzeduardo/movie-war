@@ -4,7 +4,8 @@ export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 export const SHOW_ALL = 'SHOW_ALL'
 
 export const addMovie = (movie) => {
-  return { type: ADD_MOVIE, movie}
+  return {
+    type: ADD_MOVIE, movie}
 }
 
 export const getRemoteMovies = (text) => {
