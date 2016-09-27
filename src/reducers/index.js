@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux'
-import movies from './'
+import movies from './movies'
 
-const rootReducer = combineReducers({ac.movies})
+const rootReducer = combineReducers({movies})
 
 export default rootReducer

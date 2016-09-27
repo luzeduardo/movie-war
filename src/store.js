@@ -1,3 +1,6 @@
 import {createStore} from 'redux'
-import movieAdd from './reducers'
-let store = createStore(movieAdd)
+import rootReducer from './reducers'
+
+let store = createStore(rootReducer, window.devToolsExtension && window.devToolsExtension())
+
+export default store

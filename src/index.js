@@ -5,8 +5,6 @@ import App from './App';
 import './index.css';
 
 import {Provider} from 'react-redux'
-import {createStore} from 'redux'
-import movieApp from './reducers'
 import store from './store'
 
 ReactDOM.render(
