@@ -2,6 +2,7 @@ import React from 'react'
 
 class MovieSearch extends React.Component {
   render() {
+    console.log(this.props);
     return (
       <div>
         <p className="control has-addons">
