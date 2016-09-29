@@ -16,7 +16,6 @@ ReactDOM.render(
       <Route path="/" component={App}>
         <Route path="/search" component={MovieSearch} />
       </Route>
-
     </Router>
   </Provider>,
   document.getElementById('root')
