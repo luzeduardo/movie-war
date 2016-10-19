@@ -5,13 +5,11 @@ const movies = (state = {}, action) => {
         statechangedprop: true,
         data: action.movie
       }]
-      break;
     case 'GET_REMOTE_MOVIES':
       return [...state, {
         statechangedprop: true,
         movie: action.movie
       }]
-      break;
 
     default:
       return state;
