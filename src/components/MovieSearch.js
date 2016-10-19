@@ -1,13 +1,21 @@
 import React from 'react'
 
 class MovieSearch extends React.Component {
+  getMovie = (e) => {
+    e.preventDefault();
+    const movie = this.refs.movie.value.trim();
+    this.props.actions.getRemoteMovies(movie);
+  };
+
   render() {
     return (
       <div>
-        <p className="control has-addons">
-          <input className="input" type="text" placeholder="Find a movie" />
-          <a className="button is-info" onClick={this.props.actions.getRemoteMovies.bind(this)}>Search</a>
-        </p>
+          <form onSubmit={e => this.getMovie(e)} ref="movieSearch">
+            <p className="control has-addons">
+              <input className="input" type="text" placeholder="Find a movie" ref="movie" />
+              <button type="submit" className="button is-info">Search</button>
+            </p>
+          </form>
       </div>
     )
   }

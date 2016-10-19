@@ -1,4 +1,4 @@
-const movies = (state = [], action) => {
+const movies = (state = {}, action) => {
   const index = action.index
   switch (action.type) {
     case 'ADD_MOVIE':
@@ -8,10 +8,10 @@ const movies = (state = [], action) => {
         index
       }]
       break;
-    case 'GET_MOVIE':      
+    case 'GET_MOVIE':
       return [...state, {
         statechangedprop: true,
-        data: action.data,
+        movie: action.movie,
         index
       }]
       break;
