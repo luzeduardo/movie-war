@@ -1,7 +1,7 @@
 import React from 'react'
 
 class MovieSearch extends React.Component {
-  getMovie = (e) => {
+  getMovies = (e) => {
     e.preventDefault();
     const movie = this.refs.movie.value.trim();
     this.props.actions.getRemoteMovies(movie);
@@ -10,7 +10,7 @@ class MovieSearch extends React.Component {
   render() {
     return (
       <div>
-          <form onSubmit={e => this.getMovie(e)} ref="movieSearch">
+          <form onSubmit={e => this.getMovies(e)} ref="movieSearch">
             <p className="control has-addons">
               <input className="input" type="text" placeholder="Find a movie" ref="movie" />
               <button type="submit" className="button is-info">Search</button>
