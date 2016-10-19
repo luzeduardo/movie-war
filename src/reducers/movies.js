@@ -1,18 +1,15 @@
 const movies = (state = {}, action) => {
-  const index = action.index
   switch (action.type) {
     case 'ADD_MOVIE':
       return [...state, {
         statechangedprop: true,
-        data: action.data,
-        index
+        data: action.movie
       }]
       break;
-    case 'GET_MOVIE':
+    case 'GET_REMOTE_MOVIES':
       return [...state, {
         statechangedprop: true,
-        movie: action.movie,
-        index
+        movie: action.movie
       }]
       break;
 

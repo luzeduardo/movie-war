@@ -16,8 +16,8 @@ export const incrementMovie = (index) => {
   }
 }
 
-export const getRemoteMovies = (text) => {
-  return { type: GET_REMOTE_MOVIES, text }
+export const getRemoteMovies = (movie) => {
+  return { type: GET_REMOTE_MOVIES, movie }
 }
 
 export const VisibilityFilters = {
