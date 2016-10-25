@@ -5,12 +5,8 @@ const movies = (state = {}, action) => {
         statechangedprop: true,
         data: action.movie
       }]
-    case 'GET_REMOTE_MOVIES':
-      return [...state, {
-        statechangedprop: true,
-        movie: action.movie
-      }]
-
+    case 'FETCH_MOVIE_SUCCESS' :
+      return action.payload;
     default:
       return state;
   }
