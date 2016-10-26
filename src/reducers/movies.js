@@ -5,8 +5,11 @@ const movies = (state = {}, action) => {
         statechangedprop: true,
         data: action.movie
       }]
-    case 'FETCH_MOVIE_SUCCESS' :
-      return action.payload;
+    case 'FETCH_MOVIE_SUCCESS':
+      return action.movie;
+    case 'FETCH_MOVIE':      
+      let newState = Object.assign({}, state, { name: action.movie });
+      return newState;
     default:
       return state;
   }
