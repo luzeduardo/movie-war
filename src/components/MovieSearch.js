@@ -4,7 +4,7 @@ class MovieSearch extends React.Component {
   getMovies = (e) => {
     e.preventDefault();
     const movie = this.refs.movie.value.trim();
-    this.props.actions.fetchMovie(movie);
+    this.props.actions.getRemoteMovies(movie);
   };
 
   render() {

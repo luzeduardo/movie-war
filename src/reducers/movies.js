@@ -7,12 +7,11 @@ const movies = (state = {}, action) => {
       }]
     case 'FETCH_MOVIE_SUCCESS':
       return action.movie;
-    case 'FETCH_MOVIE':      
-      let newState = Object.assign({}, state, { name: action.movie });
-      return newState;
+    case 'FETCH_MOVIE':
+      return Object.assign({}, state, { name: action.movie });
     default:
       return state;
   }
 }
 
-export default movies
+export default movies;
