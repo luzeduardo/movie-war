@@ -5,11 +5,12 @@ class Movie extends React.Component {
     return (
       <div>
         <div className="card">
-            <div className="card-image">
-              <figure className="image is-4by3">
-                <img src="" alt="" />
-              </figure>
-            </div>
+            <span>{this.props.movie}</span>
+            {/* <div className="card-image"> */}
+              {/* <figure className="image is-4by3"> */}
+                {/* <img src="" alt="" /> */}
+              {/* </figure> */}
+            {/* </div> */}
         </div>
       </div>
     )

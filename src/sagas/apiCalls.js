@@ -1,6 +1,5 @@
 import MovieServiceApi from '../api/movieServiceApi';
 
-export const loadMovie = () => {
-  console.log('loading movie');
+export const loadMovie = () => {  
   return MovieServiceApi.returnMovie().then(res => res);
 };

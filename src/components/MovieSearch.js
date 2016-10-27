@@ -11,10 +11,14 @@ class MovieSearch extends React.Component {
     return (
       <div>
           <form onSubmit={e => this.getMovies(e)} ref="movieSearch">
-            <p className="control has-addons">
-              <input className="input" type="text" placeholder="Find a movie" ref="movie" />
-              <button type="submit" className="button is-info">Search</button>
-            </p>
+            <div className="control is-grouped">
+              <div className="control">
+                <input className="input" type="text" placeholder="Find a movie" ref="movie" autoFocus />
+              </div>
+              <div className="control">
+                <button type="submit" className={this.props.movies.is_searching ? "button is-info is-loading" : " button is-info" }>Search</button>
+              </div>
+            </div>
           </form>
       </div>
     )

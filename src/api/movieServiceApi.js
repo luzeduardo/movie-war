@@ -3,11 +3,15 @@ class MovieServiceApi {
  static returnMovie() {
    return new Promise((resolve) => {
      setTimeout(() => {
-       resolve(Object.assign({}, {
+       resolve(Object.assign({}, [{
             name : "Mumy",
             type: "horror"
-       }));
-     }, 3000);
+       },{
+         name: "Grow up",
+         type: "comedy",
+       }]
+     ));
+    }, 1000);
    });
  }
 }
