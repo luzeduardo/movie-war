@@ -3,8 +3,8 @@ import React from 'react'
 class MovieSearch extends React.Component {
   getMovies = (e) => {
     e.preventDefault();
-    const movie = this.refs.movie.value.trim();
-    this.props.actions.getRemoteMovies(movie);
+    const search = this.refs.movie.value.trim();
+    this.props.actions.getRemoteMovies(search);
   };
 
   render() {

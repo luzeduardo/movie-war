@@ -6,19 +6,11 @@ export const FETCH_MOVIE = 'FETCH_MOVIE';
 export const SHOW_ALL = 'SHOW_ALL';
 
 export const addMovie = (movie) => {
-  return {
-    type: ADD_MOVIE, movie}
+  return { type: ADD_MOVIE, movie}
 }
 
-export const incrementMovie = (index) => {
-  return {
-    type: INCREMENT_MOVIE,
-    index
-  }
-}
-
-export const getRemoteMovies = (movie) => {
-  return { type: GET_REMOTE_MOVIES, movie }
+export const getRemoteMovies = (search) => {
+  return { type: GET_REMOTE_MOVIES, search }
 }
 
 export const fetchMovie = movie => {

@@ -1,15 +1,15 @@
 const movies = (state = {}, action) => {
   switch (action.type) {
-    case 'ADD_MOVIE':
-      return [...state, {
-        statechangedprop: true,
-        data: action.movie
-      }]
     case 'FETCH_MOVIE_SUCCESS':
-      return action.movie;
-      
+      return Object.assign({}, state, {
+        is_searching: false,
+        movies: action.movies
+      });
     case 'GET_REMOTE_MOVIES':
-      return Object.assign({}, state, { name: action.movie });
+      return Object.assign({}, state, {
+        is_searching: true,
+        search: action.search
+      });
     default:
       return state;
   }
