@@ -1,4 +1,3 @@
-import {fork} from 'redux-saga/effects';
 import {takeLatest} from 'redux-saga';
 import {doLoadMovie} from './loadMovie';
 
