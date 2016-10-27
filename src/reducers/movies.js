@@ -7,7 +7,8 @@ const movies = (state = {}, action) => {
       }]
     case 'FETCH_MOVIE_SUCCESS':
       return action.movie;
-    case 'FETCH_MOVIE':
+      
+    case 'GET_REMOTE_MOVIES':
       return Object.assign({}, state, { name: action.movie });
     default:
       return state;
