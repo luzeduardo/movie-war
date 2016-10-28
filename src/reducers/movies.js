@@ -1,7 +1,6 @@
 const movies = (state = {}, action) => {
   switch (action.type) {
     case 'FETCH_MOVIE_FAILURE':
-      debugger;
       return Object.assign({}, state, {
         is_searching: false,
         error: action.error

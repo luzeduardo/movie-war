@@ -1,19 +1,21 @@
-class MovieServiceApi {
+class TravelServiceApi {
 
  static returnMovie() {
    return new Promise((resolve) => {
      setTimeout(() => {
-       resolve(Object.assign({}, [{
+       resolve([
+         {
             name : "Mumy",
             type: "horror"
-       },{
-         name: "Grow up",
-         type: "comedy",
-       }]
-     ));
-    }, 1000);
+         },
+         {
+            name : "Grow Up",
+            type: "comedy"
+         }]
+     );
+     }, 1000);
    });
  }
 }
 
-export default MovieServiceApi;
+export default TravelServiceApi;
