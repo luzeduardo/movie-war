@@ -9,6 +9,7 @@
   "dependencies": {
     "bulma": "^0.1.2",
     "expect": "^1.20.2",
+    "google-maps-react": "^1.0.19",
     "lodash": "^4.16.4",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",

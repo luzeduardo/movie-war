@@ -3,9 +3,6 @@ import Movie from './Movie'
 import _ from 'lodash';
 
 export default class MovieList extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentWillMount(){
     //@TODO correct this
