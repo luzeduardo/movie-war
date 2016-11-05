@@ -1,6 +1,11 @@
-import React from 'react'
+import React from 'react';
+import {connect} from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actionCreators from '../actions/actionCreators';
+import MovieList from './MovieList';
 
 class MovieSearch extends React.Component {
+
   getMovies = (e) => {
     e.preventDefault();
     const search = this.refs.movie.value.trim();
@@ -20,9 +25,19 @@ class MovieSearch extends React.Component {
               </div>
             </div>
           </form>
+
+          <MovieList />
       </div>
     )
   }
 }
 
-export default MovieSearch;
+const mapStateToProps = (state) => ({
+  movies: state.movies
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators(actionCreators, dispatch)
+});
+
+export default (connect(mapStateToProps, mapDispatchToProps)(MovieSearch))

@@ -1,11 +1,13 @@
 import React from 'react'
 import Movie from './Movie'
 import _ from 'lodash';
+import {connect} from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actionCreators from '../actions/actionCreators'
 
-export default class MovieList extends React.Component {
+class MovieList extends React.Component {
 
   componentWillMount(){
-    //@TODO correct this
     if (typeof(this.props.movies.list) === "undefined") {
       this.props.movies.list = [];
     } else {
@@ -25,3 +27,13 @@ export default class MovieList extends React.Component {
     )
   }
 }
+
+const mapStateToProps = (state) => ({
+  movies: state.movies
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators(actionCreators, dispatch)
+});
+
+export default (connect(mapStateToProps, mapDispatchToProps)(MovieList))
