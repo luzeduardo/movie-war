@@ -8,11 +8,7 @@ import * as actionCreators from '../actions/actionCreators'
 class MovieList extends React.Component {
 
   componentWillMount(){
-    if (typeof(this.props.movies.list) === "undefined") {
-      this.props.movies.list = [];
-    } else {
-      this.props.movies.list = _.mapValues(this.props.movies.list);
-    }
+      this.props.movies.list = _.values(this.props.movies.list = []);
   }
 
   render(){
