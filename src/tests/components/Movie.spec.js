@@ -11,7 +11,8 @@ describe('<Movie />', () => {
       type: 'Animation'
     }
 
-    const wrapper = shallow( <Movie name="Cars"/> );
-    expect(wrapper.find('div.card p span').first().props().children).to.equal("Cars");
+    const wrapper = shallow( <Movie name={mock.name} type={mock.type}/> );
+    expect(wrapper.find('div.card p').childAt(0).props().children).to.equal("Cars");
+    expect(wrapper.find('div.card p').childAt(1).props().children).to.equal("Animation");
   });
 });

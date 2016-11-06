@@ -2,11 +2,6 @@ import React from 'react'
 
 class Movie extends React.Component {
 
-  propTypes: {
-    name: React.PropTypes.string.isRequired,
-    type: React.PropTypes.string.isRequired
-  }
-
   render() {
     return (
       <div>
@@ -19,6 +14,11 @@ class Movie extends React.Component {
       </div>
     )
   }
+}
+
+Movie.propTypes = {
+  name: React.PropTypes.string.isRequired,
+  type: React.PropTypes.string.isRequired
 }
 
 export default Movie;
