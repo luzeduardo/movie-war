@@ -25,7 +25,7 @@ class MovieList extends React.Component {
         <label>{this.props.movies.search}</label>
         {this.state.list.map( (movie, index) => {
             return (
-              <Movie key={index} movie={movie}/>
+              <Movie key={index} name={movie.name} type={movie.type}/>
             )}
          )}
       </div>
