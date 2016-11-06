@@ -33,6 +33,10 @@ class MovieList extends React.Component {
   }
 }
 
+MovieList.propTypes = {
+  movies: React.PropTypes.object.isRequired
+}
+
 const mapStateToProps = (state) => ({
   movies: state.movies
 });

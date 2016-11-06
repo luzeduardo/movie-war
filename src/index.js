@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 
 import {Router, Route, browserHistory, IndexRoute} from 'react-router'
 
-import App from './App';
 import MovieSearch from './components/MovieSearch'
 import MovieList from './components/MovieList'
 import Main from './components/Main'
@@ -17,7 +16,7 @@ const store = configureStore();
 ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory}>
-      <Route path="/" component={App}>
+      <Route path="/" component={Main}>
         <IndexRoute component={Main} />
         <Route path="/search" component={MovieSearch} />
         <Route path="/movies" component={MovieList} />
