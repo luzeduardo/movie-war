@@ -45,4 +45,5 @@ const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators(actionCreators, dispatch)
 });
 
-export default (connect(mapStateToProps, mapDispatchToProps)(MovieList))
+export default connect(mapStateToProps, mapDispatchToProps)(MovieList);
+export { MovieList as PureMovieList };

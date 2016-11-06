@@ -5,13 +5,13 @@ import rootReducer from '../../reducers/index';
 
 describe('getRemoteMovies Reducer', () => {
   it('Should handle GET_REMOTE_MOVIES', () => {
-    const expectedState = Object.assign({},{}, movies: {
-      is_searching: false,
+    let movies = {
+      is_searching: true,
       search: undefined
-    });
+    }
+
+    const expectedState = { movies };
     const newState = rootReducer({}, {type: 'GET_REMOTE_MOVIES'});
-    console.log(newState);
-    console.log(expectedState);
     expect(newState).to.eql( expectedState );
   });
 });
