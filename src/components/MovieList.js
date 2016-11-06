@@ -8,13 +8,22 @@ import * as actionCreators from '../actions/actionCreators'
 class MovieList extends React.Component {
 
   componentWillMount(){
-      this.props.movies.list = _.values(this.props.movies.list = []);
+      this.state = {
+        list: _.values(this.props.movies.list)
+      }
+  }
+
+  componentWillReceiveProps(props){
+    this.state = {
+      list: _.values(props.movies.list)
+    }
   }
 
   render(){
     return(
       <div>
-        {this.props.movies.list.map( (movie, index) => {
+        <label>{this.props.movies.search}</label>
+        {this.state.list.map( (movie, index) => {
             return (
               <Movie key={index} movie={movie}/>
             )}
