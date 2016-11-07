@@ -9,10 +9,7 @@ it ('getMovie Promisse', () => {
     { name : "Grow Up", type: "comedy"}
   ]
   generator.next();
-
   let expected = generator.next(list).value;
   let mocked = put({ type: 'FETCH_MOVIE_SUCCESS', list });
-  console.log(mocked);
-  console.log(expected);
-  expect(expected).to.equal(mocked);
+  expect(expected).deep.equal(mocked);
 });
