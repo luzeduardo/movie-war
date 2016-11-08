@@ -16,8 +16,9 @@ const store = configureStore();
 ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory}>
-      <Route path="/" component={Main}>
+      <Route component={Main}>
         <IndexRoute component={Main} />
+        <Route path="/" component={MovieSearch} />
         <Route path="/search" component={MovieSearch} />
         <Route path="/movies" component={MovieList} />
       </Route>
