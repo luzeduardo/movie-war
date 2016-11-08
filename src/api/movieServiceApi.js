@@ -1,4 +1,4 @@
-class TravelServiceApi {
+class MovieServiceApi {
 
  static returnMovie() {
    return new Promise((resolve) => {
@@ -18,4 +18,4 @@ class TravelServiceApi {
  }
 }
 
-export default TravelServiceApi;
+export default MovieServiceApi;
