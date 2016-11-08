@@ -1,16 +1,16 @@
 class MovieServiceApi {
 
- static returnMovie() {
+ static returnMovie(search) {
    return new Promise((resolve) => {
      setTimeout(() => {
        resolve([
-         {
-            name : "Mumy",
-            type: "horror"
+         "Search": {
+            Title : "Mumy",
+            Type: "horror"
          },
          {
-            name : "Grow Up",
-            type: "comedy"
+            Title : "Grow Up",
+            Type: "comedy"
          }]
      );
      }, 1000);

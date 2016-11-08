@@ -1,5 +1,6 @@
-import MovieServiceApi from '../api/movieServiceApi';
+// import MovieServiceApi from '../api/movieServiceApi';
+import MovieApi from '../api/movieApi';
 
-export const loadMovie = () => {
-  return MovieServiceApi.returnMovie().then(res => res);
+export const loadMovie = (search) => {
+  return MovieApi.returnMovie(search).then(res => res);
 };

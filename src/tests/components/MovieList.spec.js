@@ -25,7 +25,7 @@ describe('PureMovieList', () => {
   it('should contain label in PureMovieList', () => {
     let mock = {}
     const wrapper = shallow(<PureMovieList movies={mock}/>);
-    expect(wrapper.contains(<label></label>)).to.equal(true);
+    expect(wrapper.contains(<label><strong></strong></label>)).to.equal(true);
   });
 });
 
@@ -33,6 +33,6 @@ describe('PureMovieList not contain Movie', () => {
   it('should not contain Movie', () => {
     let mock = {}
     const wrapper = shallow(<PureMovieList movies={mock}/>);
-    expect(wrapper.contains(<Movie name="" type="" />)).to.equal(false);
+    expect(wrapper.contains(<Movie Title="" Type="" />)).to.equal(false);
   });
 });

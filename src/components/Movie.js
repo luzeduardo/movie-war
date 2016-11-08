@@ -7,8 +7,8 @@ class Movie extends React.Component {
       <div>
         <div className="card">
             <p>
-              <span>{this.props.name}</span>
-              <span>{this.props.type}</span>
+              <span>{this.props.Title}</span>
+              <span>{this.props.Type}</span>
             </p>
         </div>
       </div>
@@ -17,8 +17,8 @@ class Movie extends React.Component {
 }
 
 Movie.propTypes = {
-  name: React.PropTypes.string.isRequired,
-  type: React.PropTypes.string.isRequired
+  Title: React.PropTypes.string.isRequired,
+  Type: React.PropTypes.string.isRequired
 }
 
 export default Movie;

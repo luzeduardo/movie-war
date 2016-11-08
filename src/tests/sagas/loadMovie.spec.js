@@ -5,8 +5,8 @@ import {expect} from 'chai';
 it ('getMovie Promisse', () => {
   const generator = doLoadMovie()
   let list = [
-    { name : "Mumy", type: "horror" },
-    { name : "Grow Up", type: "comedy"}
+    { Title : "Mumy", Type: "horror" },
+    { Title : "Grow Up", Type: "comedy"}
   ]
   generator.next();
   let expected = generator.next(list).value;

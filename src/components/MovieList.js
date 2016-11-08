@@ -22,12 +22,14 @@ class MovieList extends React.Component {
   render(){
     return(
       <div>
-        <label>{this.props.movies.search}</label>
-        {this.state.list.map( (movie, index) => {
-            return (
-              <Movie key={index} name={movie.name} type={movie.type}/>
-            )}
-         )}
+        <label><strong>{this.props.movies.search}</strong></label>
+        <div>
+          {this.state.list.map( (movie, index) => {
+              return (
+                <Movie key={index} Title={movie.Title} Type={movie.Type}/>
+              )}
+           )}
+         </div>
       </div>
     )
   }
