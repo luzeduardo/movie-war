@@ -4,7 +4,8 @@ const env = runtimeEnv();
 class MovieApi {
 
  static returnMovie(search) {
-     return fetch(`${env.MOVIE_API_ADDRESS}?s=${search.search}`)
+     let srv = env.MOVIE_API_ADDRESS ? env.MOVIE_API_ADDRESS : 'http://www.omdbapi.com/';
+     return fetch(`${srv}?s=${search.search}`)
      .then(
        response => response.json()
      );
