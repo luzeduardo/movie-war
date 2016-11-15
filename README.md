@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/luzeduardo/movie-war.svg?branch=master)](https://travis-ci.org/luzeduardo/movie-war)
+
 ## Movie war!
 
 This is just a simple exercise with react and redux using the instagram idea.
