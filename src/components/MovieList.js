@@ -1,5 +1,6 @@
 import React from 'react'
 import Movie from './Movie'
+import EmptyList from './EmptyList'
 import _ from 'lodash';
 import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -20,6 +21,7 @@ class MovieList extends React.Component {
   }
 
   render(){
+    const list = this.state.list.length;
     return(
       <div>
         <label><strong>{this.props.movies.search}</strong></label>
@@ -29,6 +31,7 @@ class MovieList extends React.Component {
                 <Movie key={index} Title={movie.Title} Type={movie.Type}/>
               )}
            )}
+           {list === 0 ? <EmptyList list={list}/> : null }
          </div>
       </div>
     )
