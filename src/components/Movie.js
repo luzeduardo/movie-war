@@ -1,5 +1,4 @@
 import React from 'react';
-import ImageCard from './ImageCard';
 
 class Movie extends React.Component {
 
@@ -9,9 +8,9 @@ class Movie extends React.Component {
         <div className="box">
           <article className="media">
               <div className="media-left">
-                {this.props.Poster != "N/A" &&
+                {this.props.Poster !== "N/A" &&
                   <figure className="image is-64x64">
-                    <img src={this.props.Poster} alt="Image" />
+                    <img src={this.props.Poster} alt={this.props.Title} />
                   </figure>
                 }
               </div>

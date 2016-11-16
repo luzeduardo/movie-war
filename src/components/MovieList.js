@@ -23,7 +23,7 @@ class MovieList extends React.Component {
   render(){
     const seek = this.state.seek;
     return(
-      <div>        
+      <div>
         <div>
           {this.state.list.map( (movie, index) => {
               return (
@@ -31,7 +31,7 @@ class MovieList extends React.Component {
                 Year={movie.Year} Poster={movie.Poster}/>
               )}
            )}
-           {seek === true && this.state.list.length === 0 ? <EmptyList list={list}/> : null }
+           {seek === true && this.state.list.length === 0 ? <EmptyList/> : null }
          </div>
       </div>
     )
