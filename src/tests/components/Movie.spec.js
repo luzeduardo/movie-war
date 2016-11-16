@@ -7,11 +7,12 @@ describe('<Movie />', () => {
   it('should have prop name and type with value', () => {
     const mock = {
       Title: 'Cars',
-      Type: 'Animation'
+      Year: '2000',
+      Poster: 'N/A'
     }
 
-    const wrapper = shallow( <Movie Title={mock.Title} Type={mock.Type}/> );
-    expect(wrapper.find('div.card p').childAt(0).props().children).to.equal("Cars");
-    expect(wrapper.find('div.card p').childAt(1).props().children).to.equal("Animation");
+    const wrapper = shallow( <Movie Title={mock.Title} Year={mock.Year} Poster={mock.Poster}/> );
+    expect(wrapper.find('div.content strong').props().children).to.equal("Cars");
+    expect(wrapper.find('div.content small').props().children).to.equal("2000");
   });
 });

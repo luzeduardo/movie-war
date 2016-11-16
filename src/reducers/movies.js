@@ -6,12 +6,13 @@ const movies = (state = {}, action) => {
         error: action.error
       });
     case 'FETCH_MOVIE_SUCCESS':
-      return Object.assign({}, state, {
+      return Object.assign({}, state, {        
         is_searching: false,
         list: action.list.Search
       });
     case 'GET_REMOTE_MOVIES':
       return Object.assign({}, state, {
+        seek: true,
         is_searching: true,
         search: action.search
       });

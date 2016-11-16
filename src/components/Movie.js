@@ -1,15 +1,26 @@
-import React from 'react'
+import React from 'react';
+import ImageCard from './ImageCard';
 
 class Movie extends React.Component {
 
   render() {
     return (
       <div>
-        <div className="card">
-            <p>
-              <span>{this.props.Title}</span>
-              <span>{this.props.Type}</span>
-            </p>
+        <div className="box">
+          <article className="media">
+              <div className="media-left">
+                {this.props.Poster != "N/A" &&
+                  <figure className="image is-64x64">
+                    <img src={this.props.Poster} alt="Image" />
+                  </figure>
+                }
+              </div>
+              <div className="media-content">
+                <div className="content">
+                  <strong>{this.props.Title}</strong> <small>{this.props.Year}</small>
+                </div>
+              </div>
+          </article>
         </div>
       </div>
     )
@@ -18,7 +29,8 @@ class Movie extends React.Component {
 
 Movie.propTypes = {
   Title: React.PropTypes.string.isRequired,
-  Type: React.PropTypes.string.isRequired
+  Year: React.PropTypes.string.isRequired,
+  Poster: React.PropTypes.string.isRequired
 }
 
 export default Movie;
