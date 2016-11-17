@@ -27,8 +27,7 @@ class MovieList extends React.Component {
         <div>
           {this.state.list.map( (movie, index) => {
               return (
-                <Movie key={index} Title={movie.Title} Type={movie.Type}
-                Year={movie.Year} Poster={movie.Poster}/>
+                <Movie key={index} movie={movie}/>
               )}
            )}
            {seek === true && this.state.list.length === 0 ? <EmptyList/> : null }

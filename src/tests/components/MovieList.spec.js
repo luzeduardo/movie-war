@@ -25,6 +25,6 @@ describe('PureMovieList not contain Movie', () => {
   it('should not contain Movie', () => {
     let mock = {}
     const wrapper = shallow(<PureMovieList movies={mock}/>);
-    expect(wrapper.contains(<Movie Title="" Year="" Poster="" />)).to.equal(false);
+    expect(wrapper.contains(<Movie movie={{}} />)).to.equal(false);
   });
 });

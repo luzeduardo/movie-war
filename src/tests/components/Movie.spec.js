@@ -11,7 +11,7 @@ describe('<Movie />', () => {
       Poster: 'N/A'
     }
 
-    const wrapper = shallow( <Movie Title={mock.Title} Year={mock.Year} Poster={mock.Poster}/> );
+    const wrapper = shallow( <Movie movie={mock}/> );
     expect(wrapper.find('div.content strong').props().children).to.equal("Cars");
     expect(wrapper.find('div.content small').props().children).to.equal("2000");
   });
