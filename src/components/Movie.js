@@ -17,7 +17,7 @@ class Movie extends React.Component {
               </div>
               <div className="media-content">
                 <div className="content">
-                  <strong>{movie.Title}</strong> <small>{movie.Year}</small> <small>{movie.Metascore}</small>
+                  <strong>{movie.Title}</strong> <small>{movie.Year}</small>
                 </div>
               </div>
           </article>
