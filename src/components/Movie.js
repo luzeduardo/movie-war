@@ -10,14 +10,14 @@ class Movie extends React.Component {
           <article className="media">
               <div className="media-left">
                 {movie.Poster !== "N/A" &&
-                  <figure className="image is-64x64">
+                  <figure className="image is-32x32">
                     <img src={movie.Poster} alt={movie.Title} />
                   </figure>
                 }
               </div>
               <div className="media-content">
                 <div className="content">
-                  <strong>{movie.Title}</strong> <small>{movie.Year}</small>
+                  <strong>{movie.Title}</strong> <small>{movie.Year}</small> <small>{movie.Metascore}</small>
                 </div>
               </div>
           </article>
