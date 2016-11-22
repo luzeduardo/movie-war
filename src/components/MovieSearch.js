@@ -4,6 +4,8 @@ import { bindActionCreators } from 'redux';
 import * as actionCreators from '../actions/actionCreators';
 import MovieList from './MovieList';
 
+import { Row,TextInput,LoadingButton } from 'react-bootstrap';
+
 class MovieSearch extends React.Component {
 
   getMovies = (e) => {
@@ -15,17 +17,14 @@ class MovieSearch extends React.Component {
   render() {
     return (
       <div>
-          <form onSubmit={e => this.getMovies(e)} ref="movieSearch">
-            <div className="control is-grouped">
-              <div className="control">
-                <input className="input" type="text" placeholder="Find a movie" ref="movie" autoFocus />
-              </div>
-              <div className="control">
-                <button type="submit" className={this.props.movies.is_searching ? "button is-info is-loading" : " button is-info" }>Search</button>
-              </div>
-            </div>
+          <form className="form-horizontal" onSubmit={e => this.getMovies(e)} ref="movieSearch">
+            <Row>
+                <TextInput id="movie" placeholder="Find a movie" ref="movie"/>
+                <LoadingButton bsSize="large"
+                    bsStyle="primary" label="Add Travel" loading={this.props.movies.is_searching}
+                    loadingLabel="Search Movie" type="submit"/>
+            </Row>
           </form>
-
           <MovieList />
       </div>
     )
